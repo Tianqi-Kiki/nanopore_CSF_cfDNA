@@ -7,13 +7,13 @@ library(dplyr)
 library(ggplot2)
 library(tidyverse)
 
-# read in aligned length files
+# read in length files
 
 files_CSF <- Sys.glob('/mnt/ix1/Projects/M085_221117_CSF_cfDNA_methylation/00_sample/mp0007_sample_summary_sup_methyl/align_length/*.align_length.txt')
 length1 <- list ()
 length1_subset <- list () 
 
-# sample 100k reads in each sample
+# sample 100k aligned reads from each sample
 
 for (i in 1 : length(files_CSF)) {
   print(i)
