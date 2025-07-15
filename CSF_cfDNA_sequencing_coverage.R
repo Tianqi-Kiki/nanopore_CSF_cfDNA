@@ -11,20 +11,15 @@ library(tidyverse)
 
 files_CSF <- Sys.glob('/mnt/ix1/Projects/M085_221117_CSF_cfDNA_methylation/00_sample/mp0007_sample_summary_sup_methyl/align_length/*.align_length.txt')
 length1 <- list ()
-length1_subset <- list () 
-
-# sample 100k aligned reads from each sample
 
 for (i in 1 : length(files_CSF)) {
   print(i)
   CSF <- files_CSF[i]
   sample <- basename(CSF)
   sample <- gsub(pattern = ".align_length.txt", replacement = "", x=sample)
-  length1[[i]] <- fread(files_CSF[i]) %>% mutate(sample = sample)
-  set.seed(0)
-  length1_subset[[i]] <- length1[[i]] %>% 
-    filter(align_length != 'NA') %>%
-    sample_n(100000, replace = TRUE)  
+  length1[[i]] <- fread(files_CSF[i]) %>% 
+  filter(align_length != 'NA') %>% 
+  mutate(sample = sample)  
 }
 
 df_CSF <- do.call(rbind.data.frame, length1)
