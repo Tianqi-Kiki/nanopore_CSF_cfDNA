@@ -21,6 +21,7 @@ for (i in 1 : length(files_CSF)) {
   filter(align_length != 'NA') %>% 
   mutate(sample = sample)  
 }
+
 df_CSF <- do.call(rbind.data.frame, length1)
 
 # calculate sequencing coverage
