@@ -22,8 +22,9 @@ for (i in 1 : length(files_CSF)) {
   sample <- gsub(pattern = ".align_length.txt", replacement = "", x=sample)
   set.seed(0)
   length1_subset[[i]] <- fread(files_CSF[i]) %>% 
-    mutate(sample = sample) %>% filter(align_length != 'NA') %>%
-    sample_n(100000, replace = TRUE) 
+  filter(align_length != 'NA') %>%
+  sample_n(100000, replace = TRUE) %>%
+  mutate(sample = sample)
 }
 
 df_CSF_sub <- do.call(rbind.data.frame, length1_subset)
