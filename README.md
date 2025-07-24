@@ -41,6 +41,6 @@ This is a R notebook-style script used in Rstudio to plot the promoter 5mC% or i
 * tidyverse 2.0.0
 
 ## Data
-Aggregated methylation calls and sequence aligned BAM files are deposited in NCBI’s dbGaP under accession phs003794. 
+Aggregated methylation calls and sequence aligned BAM files will be deposited in NCBI’s dbGaP under accession phs003794. 
 
   
