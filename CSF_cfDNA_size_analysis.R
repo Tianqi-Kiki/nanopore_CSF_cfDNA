@@ -1,6 +1,6 @@
 # CSF_cfDNA_size_analysis.R
 # this file is meant to be used inside Rstudio
-# this file takes a flat table of insert sizes for each read from a bam file, and plots nucleosome ratios and size distribution
+# this file takes a flat table of insert sizes for each read from a bam file, and plots nucleosome ratios and size distribution of the CSF samples 
 
 library(data.table)
 library(dplyr)
