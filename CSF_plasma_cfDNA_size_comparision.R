@@ -1,6 +1,6 @@
 # CSF_plasma_cfDNA_size_comparision.R
 # this file is meant to be used inside Rstudio
-# this file takes a flat table of insert sizes for each read from a bam file, and plots nucleosome ratios and size distribution
+# this file compares the cfDNA nucleosome ratios and size distribution between the plasma and CSF samples
 
 library(data.table)
 library(dplyr)
