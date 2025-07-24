@@ -1,6 +1,6 @@
 # CSF_cfDNA_sequencing_coverage.R
 # this file is meant to be used inside Rstudio
-# this file takes a flat table of insert sizes for each read from a bam file, calculates and plots the sequencing coverage of all samples
+# this file takes a flat table of insert sizes for each read from a bam file, calculates and plots the sequencing coverage of the CSF samples
 
 library(data.table)
 library(dplyr)
